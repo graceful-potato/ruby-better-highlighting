@@ -1,25 +1,46 @@
 {
   "name": "ruby-better-highlighting",
   "displayName": "Ruby Better Highlighting",
-  "description": "Modified grammar file for ruby that adds additional scopes for better syntax highlighting. It distinguishes every syntactic structure that is closed by `end` keyword and gives you ability to highlight them differently.",
+  "description": "Modified grammar file for ruby that adds additional scopes for better syntax highlighting. It supports YARD doc and distinguishes every syntactic structure that is closed by `end` keyword and gives you ability to highlight them differently.",
+  "icon": "images/icon.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
   },
+  "publisher": "GracefulPotato",
   "categories": [
     "Programming Languages"
   ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
-    "grammars": [{
-      "language": "ruby",
-      "scopeName": "source.rubyextended",
-      "path": "./syntaxes/ruby.cson.json"
-    }]
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "ruby-better-highlighting.recommendTheme": {
+          "type": "boolean",
+          "default": true,
+          "description": "Recommend installing Gruvbox ish theme."
+        }
+      }
+    },
+    "grammars": [
+      {
+        "language": "ruby",
+        "scopeName": "source.rubyextended",
+        "path": "./syntaxes/ruby.cson.json"
+      }
+    ]
   },
   "scripts": {
     "test": "vscode-tmgrammar-test -g syntaxes/ruby.cson.json \"./test/**/*.rb\""
   },
   "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.95.0",
+    "typescript": "^5.7.2",
     "vscode-tmgrammar-test": "^0.1.3"
   }
 }
