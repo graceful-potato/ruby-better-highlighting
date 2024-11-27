@@ -1,0 +1,25 @@
+{
+  "name": "ruby-better-highlighting",
+  "displayName": "Ruby Better Highlighting",
+  "description": "Modified grammar file for ruby that adds additional scopes for better syntax highlighting. It distinguishes every syntactic structure that is closed by `end` keyword and gives you ability to highlight them differently.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [{
+      "language": "ruby",
+      "scopeName": "source.rubyextended",
+      "path": "./syntaxes/ruby.cson.json"
+    }]
+  },
+  "scripts": {
+    "test": "vscode-tmgrammar-test -g syntaxes/ruby.cson.json \"./test/**/*.rb\""
+  },
+  "devDependencies": {
+    "vscode-tmgrammar-test": "^0.1.3"
+  }
+}
