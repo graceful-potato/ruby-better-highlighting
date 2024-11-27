@@ -4,6 +4,11 @@
   "description": "Modified grammar file for ruby that adds additional scopes for better syntax highlighting. It supports YARD doc and distinguishes every syntactic structure that is closed by `end` keyword and gives you ability to highlight them differently.",
   "icon": "images/icon.png",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graceful-potato/ruby-better-highlighting"
+  },
+  "homepage": "https://github.com/graceful-potato/ruby-better-highlighting",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -35,11 +40,13 @@
     ]
   },
   "scripts": {
-    "test": "vscode-tmgrammar-test -g syntaxes/ruby.cson.json \"./test/**/*.rb\""
+    "test": "vscode-tmgrammar-test -g syntaxes/ruby.cson.json \"./test/**/*.rb\"",
+    "build": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
+    "@types/node": "^22.10.1",
     "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "^3.2.1",
     "typescript": "^5.7.2",
     "vscode-tmgrammar-test": "^0.1.3"
   }
