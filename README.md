@@ -2,68 +2,69 @@
 
 Modified grammar file for ruby that adds additional scopes for better syntax highlighting. It supports YARD doc and distinguishes every syntactic structure that is closed by `end` keyword and gives you ability to highlight them differently.
 
-![example1](https://github.com/user-attachments/assets/072e64c7-1cf6-4041-8846-a4e0e987edef)
+![example1](https://github.com/user-attachments/assets/88fc271e-162e-4041-94a1-4241c2fdd3e0)
+![example2](https://github.com/user-attachments/assets/b2257c26-8004-407b-b8ca-154e03c6ba0c)
 
 ## Additional scopes
 
-**Syntactic structures:**
-`keyword.control.class.begin.ruby` for keyword `class`
-`keyword.control.class.end.ruby` for keyword `end` that closes class
+**Syntactic structures:**\
+`keyword.control.class.begin.ruby` for keyword `class`\
+`keyword.control.class.end.ruby` for keyword `end` that closes class\
 `meta.class.ruby` for everything between `class` and `end`
 
-`keyword.control.module.begin.ruby` for keyword `module`
-`keyword.control.module.end.ruby` for keyword `end` that closes module
+`keyword.control.module.begin.ruby` for keyword `module`\
+`keyword.control.module.end.ruby` for keyword `end` that closes module\
 `meta.module.ruby` for everything between `module` and `end`
 
-`keyword.control.for.begin.ruby` for keyword `for`
-`keyword.control.for.end.ruby` for keyword `end` that closes for loop
+`keyword.control.for.begin.ruby` for keyword `for`\
+`keyword.control.for.end.ruby` for keyword `end` that closes for loop\
 `meta.block.for.ruby` for everything between `for` and `end`
 
-`keyword.control.do.begin.ruby` for keyword `do`
-`keyword.control.do.end.ruby` for keyword `end` that closes do block
+`keyword.control.do.begin.ruby` for keyword `do`\
+`keyword.control.do.end.ruby` for keyword `end` that closes do block\
 `meta.block.do.ruby` for everything between `do` and `end`
 
-`keyword.control.begin.begin.ruby` for keyword `begin`
-`keyword.control.begin.end.ruby` for keyword `end` that closes begin-end block
+`keyword.control.begin.begin.ruby` for keyword `begin`\
+`keyword.control.begin.end.ruby` for keyword `end` that closes begin-end block\
 `meta.block.begin.ruby` for everything between `begin` and `end`
 
-`keyword.control.conditional.case.begin.ruby` for keyword `case`
-`keyword.control.conditional.case.end.ruby` for keyword `end` that closes case block
+`keyword.control.conditional.case.begin.ruby` for keyword `case`\
+`keyword.control.conditional.case.end.ruby` for keyword `end` that closes case block\
 `meta.block.case.ruby` for everything between `case` and `end`
 
-`keyword.control.conditional.if.begin.ruby` for keyword `if` (if block, not modifier)
-`keyword.control.conditional.if.end.ruby` for keyword `end` that closes if block
-`meta.block.if.ruby` for everything between `if` and `end`
+`keyword.control.conditional.if.begin.ruby` for keyword `if` (if block, not modifier)\
+`keyword.control.conditional.if.end.ruby` for keyword `end` that closes if block\
+`meta.block.if.ruby` for everything between `if` and `end`\
 `keyword.control.modifier.conditional.if.ruby` for `if` modifier in expressions like `perform if condition`
 
-`keyword.control.conditional.unless.begin.ruby` for keyword `unless` (unless block, not modifier)
-`keyword.control.conditional.unless.end.ruby` for keyword `end` that closes unless block
-`meta.block.unless.ruby` for everything between `unless` and `end`
+`keyword.control.conditional.unless.begin.ruby` for keyword `unless` (unless block, not modifier)\
+`keyword.control.conditional.unless.end.ruby` for keyword `end` that closes unless block\
+`meta.block.unless.ruby` for everything between `unless` and `end`\
 `keyword.control.modifier.conditional.unless.ruby` for `unless` modifier in expressions like `perform unless condition`
 
-`keyword.control.while.begin.ruby` for keyword `while` (while block, not modifier)
-`keyword.control.while.end.ruby` for keyword `end` that closes while block
-`meta.block.while.ruby` for everything between `while` and `end`
+`keyword.control.while.begin.ruby` for keyword `while` (while block, not modifier)\
+`keyword.control.while.end.ruby` for keyword `end` that closes while block\
+`meta.block.while.ruby` for everything between `while` and `end`\
 `keyword.control.modifier.while.ruby` for `while` modifier in expressions like `perform while condition`
 
-`keyword.control.until.begin.ruby` for keyword `until` (until block, not modifier)
-`keyword.control.until.end.ruby` for keyword `end` that closes until block
-`meta.block.until.ruby` for everything between `until` and `end`
+`keyword.control.until.begin.ruby` for keyword `until` (until block, not modifier)\
+`keyword.control.until.end.ruby` for keyword `end` that closes until block\
+`meta.block.until.ruby` for everything between `until` and `end`\
 `keyword.control.modifier.until.ruby` for `until` modifier in expressions like `perform until condition`
 
-`keyword.control.def.begin.ruby` for keyword `def`
-`keyword.control.def.end.ruby` for keyword `end` that closes method block
+`keyword.control.def.begin.ruby` for keyword `def`\
+`keyword.control.def.end.ruby` for keyword `end` that closes method block\
 `meta.function.method.with-arguments.ruby` or `meta.function.method.without-arguments.ruby` for everything between `def` and `end`
 
-`keyword.control.rescue.ruby` for keyword `rescue`
+`keyword.control.rescue.ruby` for keyword `rescue`\
 `keyword.control.ensure.ruby` for keyword `ensure`
 
-`keyword.control.conditional.else.ruby` for keyword `else`
-`keyword.control.conditional.elsif.ruby` for keyword `elsif`
-`keyword.control.conditional.when.ruby` for keyword `when`
+`keyword.control.conditional.else.ruby` for keyword `else`\
+`keyword.control.conditional.elsif.ruby` for keyword `elsif`\
+`keyword.control.conditional.when.ruby` for keyword `when`\
 `keyword.control.conditional.then.ruby` for keyword `then`
 
-`keyword.control.BEGIN.ruby` for keyword `BEGIN`
+`keyword.control.BEGIN.ruby` for keyword `BEGIN`\
 `keyword.control.END.ruby` for keyword `END`
 
 `keyword.control.optional.do.ruby` for optional `do` like in for loop and while loop
@@ -72,17 +73,17 @@ Modified grammar file for ruby that adds additional scopes for better syntax hig
 
 Each `end` keyword is also assigned the scope `keyword.control.end.ruby`
 
-**YARD:**
-`comment.line.keyword.punctuation.yard.ruby` for `@` symbol in front of yard tags
-`comment.line.keyword.yard.ruby` for yard tags like `param`, `return`, etc
-`comment.line.parameter.yard.ruby` for parameter names
-`comment.line.type.yard.ruby` for types
-`comment.line.punctuation.yard.ruby` for `[]` symbols
-`comment.line.string.yard.ruby` for comments
-`comment.line.hashkey.yard.ruby` for key in `option` tag
+**YARD:**\
+`comment.line.keyword.punctuation.yard.ruby` for `@` symbol in front of yard tags\
+`comment.line.keyword.yard.ruby` for yard tags like `param`, `return`, etc\
+`comment.line.parameter.yard.ruby` for parameter names\
+`comment.line.type.yard.ruby` for types\
+`comment.line.punctuation.yard.ruby` for `[]` symbols\
+`comment.line.string.yard.ruby` for comments\
+`comment.line.hashkey.yard.ruby` for key in `option` tag\
 `comment.line.defaultvalue.yard.ruby` for default value in `option` tag
 
-## How To Highlight YARD In Your Current Theme
+### How To Highlight YARD In Your Current Theme
 
 1. Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
 2. Type Preferences: Open Settings (JSON) and select it.
@@ -141,7 +142,7 @@ Each `end` keyword is also assigned the scope `keyword.control.end.ruby`
 },
 ```
 
-## How To Highlight Ruby Code Blocks differently
+### How To Highlight Ruby Code Blocks Differently In Your Current Theme
 
 1. Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
 2. Type Preferences: Open Settings (JSON) and select it.
